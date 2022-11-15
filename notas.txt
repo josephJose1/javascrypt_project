@@ -2,3 +2,26 @@ node --version
 v16.18.1
 npm --version
 8.19.2
+
+#https://www.npmjs.com/package/serve?source=post_page-----2d6db18f557a----------------------
+
+#If you prefer, you can also install the package globally (you'll need at least Node LTS):
+with sudo
+
+> npm install --global serve
+> npm i -g serve
+
+Once that's done, you can run this command inside your project's directory...
+
+> serve
+#or
+>serve -l 3000
+
+   │   - Local:    http://localhost:3000    
+   │   - Network:  http://192.168.100.53:3000  
+
+#simulation model view template without controller
+
+#use client side storage 
+
+#to import we need export first!!!

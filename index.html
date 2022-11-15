@@ -73,7 +73,7 @@
 
   <!-- Modal -->
   
-  <!-- <div
+  <div
     class="modal fade"
     id="modal"
     tabindex="-1"
@@ -90,6 +90,7 @@
           <button
             type="button"
             class="close"
+            id="close-top-modal"
             data-dismiss="modal"
             aria-label="Close"
           >
@@ -128,7 +129,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary" id="close-footer-modal" data-dismiss="modal">
             Close
           </button>
           <button type="button" class="btn btn-info" id="modal-btn">
@@ -137,7 +138,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <main>
     <div class="container pt-3">
@@ -198,25 +199,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- <tr id="myrow-1">
-              <td>
-                Learn JS
-              </td>
-              <td>
-                Watch Javascript tutorials on Youtube
-              </td>
-              <td class="text-center">
-                <input type="checkbox">
-              </td>
-              <td class="text-right">
-                <button class="btn btn-primary mb-1">
-                  <i class="fa fa-pencil"></i>
-                </button>
-                <button class="btn btn-danger mb-1 ml-1 btn-trash-0">
-                  <i class="fa fa-trash"></i>
-                </button>
-              </td>
-            </tr> -->
+            <!-- code generated with JS -->
           </tbody>
         </table>
       </div>
@@ -239,6 +222,7 @@
   -->
   
   <!-- JS Code -->
-  <script src="assets/js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
+  <div id="backdrow-modal" class=""></div>
 </body>
 </html>
