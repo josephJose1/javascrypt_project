@@ -1,5 +1,6 @@
 import AddTodo from "./components/add-todo.js";
 import Modal from "./components/modal.js"; 
+import Filters from "./components/filters.js";
 
 export default class View{
     constructor(){
@@ -20,6 +21,9 @@ export default class View{
         this.myModal.xbtn.onclick = () => {
             this.myModal.hideModal();
         }
+
+        this.filters = new Filters();//instance
+        this.filters.onClick((filters) => this.filter(filters));
     }
     //table managment 
     setModel(model){
@@ -71,6 +75,11 @@ export default class View{
 
     }
 
+    filter(filters){
+        console.log(filters);
+        //2:09:41
+    }
+
     createRow(todo){
         // Find a <table> element with id="table" and it's body:
         //var table = document.getElementById("table");
@@ -104,8 +113,14 @@ export default class View{
             <button class="btn btn-primary mb-1">
                 <i class="fa fa-pencil"></i>
             </button>`
-        cell4.children[0].onclick = () => {
-            this.toggleModal(todo);
+        cell4.children[0].onclick = () => {//celda 4 edit button
+            this.toggleModal({
+                id:todo.id,
+                title:cell1.innerText,
+                descr:cell2.innerText,
+                completed:node.checked
+
+            });
         }
         // cell4.children[0].setAttribute('data-toggle','modal');
         // cell4.children[0].setAttribute('data-target','#modal');

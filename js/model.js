@@ -30,7 +30,16 @@ export default class Model {
     }
 
     getTodos(){
-        return this.todos; //cannot be original
+        //return this.todos; //cannot be original //instead copy
+        const todos = [];
+        for (const todo of this.todos){
+            todos.push({...todo});
+        }
+
+        return todos;
+        //alternative  //one line
+        // return this.todos.map((todo) => todo.id === id);
+
     }
     // simulation of DB , assing identifier. 
     addTodo(title, descr){
